@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 package-lock.json
-
+CLAUDE.md
 # Environment variables
 .env
 .env.local
@@ -49,3 +49,5 @@ Thumbs.db
 .DS_Store
 Desktop.ini
 $RECYCLE.BIN/
+
+.vercel
