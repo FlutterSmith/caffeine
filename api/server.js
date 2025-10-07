@@ -11,10 +11,14 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const authRoutes = require("./routes/auth");
-const orderRoutes = require("./routes/orders");
-const paymentRoutes = require("./routes/payment");
-const { generalLimiter } = require("./middleware/rateLimiter");
+
+// Feature modules
+const { authRoutes } = require("./features/auth");
+const { ordersRoutes } = require("./features/orders");
+const { paymentsRoutes } = require("./features/payments");
+
+// Shared middleware
+const { generalLimiter } = require("./shared/middleware/rateLimiter");
 
 // Load environment variables
 dotenv.config();
