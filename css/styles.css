@@ -644,9 +644,11 @@ section {
     background: linear-gradient(135deg, var(--primary-brown) 0%, var(--dark-brown) 100%),
                 url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920') center/cover;
     background-blend-mode: multiply;
+    background-attachment: scroll;
     color: var(--white);
     text-align: center;
-    padding: var(--spacing-xxl) 0;
+    padding: var(--spacing-xxl) var(--spacing-md);
+    overflow: hidden;
 }
 
 .cta-overlay {
@@ -656,22 +658,28 @@ section {
     right: 0;
     bottom: 0;
     background: rgba(74, 51, 42, 0.4);
+    z-index: 1;
 }
 
 .cta-content {
     position: relative;
     z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
 .cta-content h2 {
     color: var(--white);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.75rem, 5vw, 3rem);
     margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .cta-content p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     margin-bottom: var(--spacing-lg);
+    color: var(--cream);
 }
 
 /* ==================== Testimonials ==================== */
@@ -2363,6 +2371,18 @@ section {
     .cart-summary {
         position: static;
     }
+
+    .cta-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .cta-content h2 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    .cta-content p {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
 }
 
 @media (max-width: 768px) {
@@ -2411,6 +2431,30 @@ section {
     .lightbox-next {
         display: none;
     }
+
+    .cta-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+        background-attachment: scroll;
+    }
+
+    .cta-content {
+        padding: 0;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        line-height: 1.2;
+    }
+
+    .cta-content p {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .cta-content .btn {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2442,6 +2486,29 @@ section {
 
     .faq-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .cta-content {
+        padding: 0 var(--spacing-xs);
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .cta-content .btn {
+        width: 100%;
+        padding: 0.875rem 1.25rem;
     }
 }
 
