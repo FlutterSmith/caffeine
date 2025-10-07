@@ -53,8 +53,8 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/orders", orderRoutes);
-app.use("/api/payment", paymentRoutes);
+app.use("/api/orders", ordersRoutes);
+app.use("/api/payment", paymentsRoutes);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {
