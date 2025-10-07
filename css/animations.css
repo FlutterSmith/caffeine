@@ -1,0 +1,630 @@
+/**
+ * Caffeine Coffee Shop - Advanced Animations
+ * Exciting animations and transitions for enhanced UX
+ */
+
+/* ==================== Loading Animations ==================== */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes flipIn {
+    from {
+        opacity: 0;
+        transform: perspective(400px) rotateY(90deg);
+    }
+    to {
+        opacity: 1;
+        transform: perspective(400px) rotateY(0deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%, 30% {
+        transform: scale(0.9);
+    }
+    20%, 40% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==================== Page Transitions ==================== */
+.page-transition-enter {
+    animation: fadeInScale 0.5s ease;
+}
+
+.page-transition-exit {
+    animation: fadeIn 0.3s ease reverse;
+}
+
+/* ==================== Card Animations ==================== */
+.product-card,
+.menu-item,
+.testimonial-card,
+.gallery-item {
+    animation: fadeInScale 0.6s ease;
+    animation-fill-mode: both;
+}
+
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+.product-card:nth-child(6) { animation-delay: 0.6s; }
+
+.product-card.swipe-left {
+    animation: slideInLeft 0.5s ease;
+}
+
+.product-card.swipe-right {
+    animation: slideInRight 0.5s ease;
+}
+
+/* ==================== Hover Effects ==================== */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.hover-bounce:hover {
+    animation: bounce 0.5s ease;
+}
+
+.hover-shake:hover {
+    animation: shake 0.5s ease;
+}
+
+.hover-float:hover {
+    animation: float 2s ease infinite;
+}
+
+.hover-wiggle:hover {
+    animation: wiggle 0.5s ease;
+}
+
+.hover-glow:hover {
+    animation: glow 1.5s ease infinite;
+}
+
+/* ==================== Button Animations ==================== */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.loading {
+    pointer-events: none;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+/* ==================== Icon Animations ==================== */
+.icon-pulse {
+    animation: pulse 2s ease infinite;
+}
+
+.icon-bounce {
+    animation: bounce 1s ease infinite;
+}
+
+.icon-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.icon-float {
+    animation: float 3s ease infinite;
+}
+
+.cart-icon:hover i {
+    animation: bounce 0.5s ease;
+}
+
+.cart-icon .cart-count {
+    animation: fadeInScale 0.3s ease;
+}
+
+.cart-icon.updated .cart-count {
+    animation: heartbeat 0.5s ease;
+}
+
+/* ==================== Image Animations ==================== */
+.product-image img,
+.menu-item-image img,
+.gallery-image img {
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img,
+.menu-item:hover .menu-item-image img,
+.gallery-item:hover .gallery-image img {
+    transform: scale(1.15) rotate(2deg);
+}
+
+/* ==================== Loading Spinner ==================== */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(111, 78, 55, 0.2);
+    border-top-color: #6F4E37;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.spinner-small {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+}
+
+/* ==================== Progress Bar ==================== */
+.progress-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #6F4E37, #D4AF37);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+}
+
+/* ==================== Skeleton Loading ==================== */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease infinite;
+    border-radius: 4px;
+}
+
+/* ==================== Modal Animations ==================== */
+.modal {
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    animation: slideInUp 0.4s ease;
+}
+
+.modal.closing {
+    animation: fadeIn 0.3s ease reverse;
+}
+
+.modal.closing .modal-content {
+    animation: slideInDown 0.4s ease;
+}
+
+/* ==================== Notification Toast ==================== */
+.notification-toast {
+    animation: slideInRight 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.notification-toast.removing {
+    animation: slideInRight 0.3s ease reverse;
+}
+
+/* ==================== Form Field Focus ==================== */
+input:focus,
+textarea:focus,
+select:focus {
+    animation: glow 0.5s ease;
+}
+
+/* ==================== Scroll Reveal ==================== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.scroll-reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.scroll-reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ==================== Parallax Effect ==================== */
+.parallax {
+    transition: transform 0.1s ease-out;
+}
+
+/* ==================== Swipe Indicators ==================== */
+.swipe-indicator {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: rgba(212, 175, 55, 0.5);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.swipe-indicator.left {
+    left: 20px;
+    animation: slideInLeft 0.3s ease;
+}
+
+.swipe-indicator.right {
+    right: 20px;
+    animation: slideInRight 0.3s ease;
+}
+
+.swipe-indicator.active {
+    opacity: 1;
+}
+
+/* ==================== Card Flip ==================== */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* ==================== Stagger Animations ==================== */
+.stagger-item {
+    animation: fadeInScale 0.5s ease both;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.05s; }
+.stagger-item:nth-child(2) { animation-delay: 0.1s; }
+.stagger-item:nth-child(3) { animation-delay: 0.15s; }
+.stagger-item:nth-child(4) { animation-delay: 0.2s; }
+.stagger-item:nth-child(5) { animation-delay: 0.25s; }
+.stagger-item:nth-child(6) { animation-delay: 0.3s; }
+.stagger-item:nth-child(7) { animation-delay: 0.35s; }
+.stagger-item:nth-child(8) { animation-delay: 0.4s; }
+
+/* ==================== Entrance Animations ==================== */
+.animate-on-scroll {
+    opacity: 0;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.animate-zoom-in {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.animate-flip-in {
+    animation: flipIn 0.8s ease forwards;
+}
+
+/* ==================== Attention Seekers ==================== */
+.attention-bounce {
+    animation: bounce 1s ease 3;
+}
+
+.attention-shake {
+    animation: shake 0.5s ease;
+}
+
+.attention-pulse {
+    animation: pulse 1s ease 3;
+}
+
+.attention-heartbeat {
+    animation: heartbeat 1.3s ease infinite;
+}
+
+/* ==================== Mobile Swipe Gesture ==================== */
+.swipeable {
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.swiping {
+    transition: none !important;
+}
+
+.swipe-success {
+    animation: slideInRight 0.3s ease;
+}
+
+/* ==================== Responsive Animations ==================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card,
+    .menu-item,
+    .testimonial-card {
+        animation-duration: 0.4s;
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+}
+
+/* ==================== Performance Optimizations ==================== */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}

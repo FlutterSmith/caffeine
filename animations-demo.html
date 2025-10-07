@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Demo - Caffeine</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .demo-section {
+            padding: 3rem 0;
+            border-bottom: 2px solid #E8D5C4;
+        }
+        .demo-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #6F4E37;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .demo-box {
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .instruction {
+            background: #F5E6D3;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-coffee"></i>
+                        <span>CAFFEINE</span>
+                    </a>
+                    <div class="nav-actions">
+                        <a href="index.html" class="btn-login">← Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <div class="container">
+            <div style="text-align: center; padding: 3rem 0;">
+                <h1 style="font-size: 3rem; margin-bottom: 1rem;">🎨 Animations & Gestures Demo</h1>
+                <p style="font-size: 1.25rem; color: #8B6F47;">Interactive animations and swipe gestures for enhanced UX</p>
+            </div>
+
+            <!-- Scroll Animations -->
+            <section class="demo-section">
+                <h2 class="demo-title">Scroll-Triggered Animations</h2>
+                <div class="instruction">
+                    📜 Scroll down to see elements animate into view
+                </div>
+                <div class="demo-grid" data-stagger>
+                    <div class="demo-box scroll-reveal">
+                        <i class="fas fa-coffee icon-float" style="font-size: 3rem; color: #6F4E37;"></i>
+                        <h3>Fade In</h3>
+                        <p>Smooth fade-in effect</p>
+                    </div>
+                    <div class="demo-box scroll-reveal-left">
+                        <i class="fas fa-heart icon-bounce" style="font-size: 3rem; color: #D4AF37;"></i>
+                        <h3>Slide Left</h3>
+                        <p>Slides in from left</p>
+                    </div>
+                    <div class="demo-box scroll-reveal-right">
+                        <i class="fas fa-star icon-pulse" style="font-size: 3rem; color: #6F4E37;"></i>
+                        <h3>Slide Right</h3>
+                        <p>Slides in from right</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Swipe Gestures -->
+            <section class="demo-section">
+                <h2 class="demo-title">Swipe Gestures (Mobile)</h2>
+                <div class="instruction">
+                    👆 On mobile: Swipe RIGHT to add to favorites ❤️ | Swipe LEFT to dismiss 👈
+                </div>
+                <div class="demo-grid">
+                    <article class="product-card swipeable">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="Espresso">
+                        </div>
+                        <div class="product-info">
+                            <h3>Espresso</h3>
+                            <p>Try swiping me!</p>
+                            <span class="price">$3.50</span>
+                        </div>
+                    </article>
+                    <article class="product-card swipeable">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400" alt="Latte">
+                        </div>
+                        <div class="product-info">
+                            <h3>Latte</h3>
+                            <p>Swipe me too!</p>
+                            <span class="price">$4.75</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Hover Effects -->
+            <section class="demo-section">
+                <h2 class="demo-title">Hover Animations</h2>
+                <div class="instruction">
+                    🖱️ Hover over elements to see animations (desktop only)
+                </div>
+                <div class="demo-grid">
+                    <div class="demo-box hover-lift">
+                        <i class="fas fa-arrow-up" style="font-size: 3rem; color: #6F4E37;"></i>
+                        <h3>Lift</h3>
+                        <p>Lifts on hover</p>
+                    </div>
+                    <div class="demo-box hover-bounce">
+                        <i class="fas fa-basketball-ball" style="font-size: 3rem; color: #D4AF37;"></i>
+                        <h3>Bounce</h3>
+                        <p>Bounces on hover</p>
+                    </div>
+                    <div class="demo-box hover-shake">
+                        <i class="fas fa-bell" style="font-size: 3rem; color: #6F4E37;"></i>
+                        <h3>Shake</h3>
+                        <p>Shakes on hover</p>
+                    </div>
+                    <div class="demo-box hover-wiggle">
+                        <i class="fas fa-fish" style="font-size: 3rem; color: #D4AF37;"></i>
+                        <h3>Wiggle</h3>
+                        <p>Wiggles on hover</p>
+                    </div>
+                    <div class="demo-box hover-glow">
+                        <i class="fas fa-lightbulb" style="font-size: 3rem; color: #6F4E37;"></i>
+                        <h3>Glow</h3>
+                        <p>Glows on hover</p>
+                    </div>
+                    <div class="demo-box hover-float">
+                        <i class="fas fa-cloud" style="font-size: 3rem; color: #D4AF37;"></i>
+                        <h3>Float</h3>
+                        <p>Floats on hover</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Button Animations -->
+            <section class="demo-section">
+                <h2 class="demo-title">Button Effects</h2>
+                <div class="instruction">
+                    👆 Click buttons to see ripple effects
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                    <button class="btn btn-outline">Outline Button</button>
+                    <button class="btn btn-primary loading">Loading State</button>
+                </div>
+            </section>
+
+            <!-- Icon Animations -->
+            <section class="demo-section">
+                <h2 class="demo-title">Animated Icons</h2>
+                <div class="demo-grid">
+                    <div class="demo-box">
+                        <i class="fas fa-spinner icon-rotate" style="font-size: 3rem; color: #6F4E37;"></i>
+                        <h3>Rotate</h3>
+                    </div>
+                    <div class="demo-box">
+                        <i class="fas fa-heart icon-pulse" style="font-size: 3rem; color: #D4AF37;"></i>
+                        <h3>Pulse</h3>
+                    </div>
+                    <div class="demo-box">
+                        <i class="fas fa-arrow-down icon-bounce" style="font-size: 3rem; color: #6F4E37;"></i>
+                        <h3>Bounce</h3>
+                    </div>
+                    <div class="demo-box">
+                        <i class="fas fa-cloud icon-float" style="font-size: 3rem; color: #D4AF37;"></i>
+                        <h3>Float</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading States -->
+            <section class="demo-section">
+                <h2 class="demo-title">Loading Animations</h2>
+                <div class="demo-grid">
+                    <div class="demo-box">
+                        <div class="spinner" style="margin: 0 auto;"></div>
+                        <h3 style="margin-top: 1rem;">Spinner</h3>
+                    </div>
+                    <div class="demo-box">
+                        <div class="spinner spinner-small" style="margin: 0 auto;"></div>
+                        <h3 style="margin-top: 1rem;">Small Spinner</h3>
+                    </div>
+                    <div class="demo-box">
+                        <div class="skeleton" style="height: 100px; width: 100%; margin-bottom: 1rem;"></div>
+                        <h3>Skeleton Loading</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card Flip -->
+            <section class="demo-section">
+                <h2 class="demo-title">Card Flip Effect</h2>
+                <div class="instruction">
+                    👆 Click or hover to flip cards
+                </div>
+                <div class="demo-grid">
+                    <div class="flip-card demo-box" style="height: 200px;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Front Side</h3>
+                                <p>Click or hover to flip!</p>
+                            </div>
+                            <div class="flip-card-back" style="background: #6F4E37; color: white;">
+                                <h3>Back Side</h3>
+                                <p>Flipped!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card demo-box" style="height: 200px;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Special Offer</h3>
+                                <p>See details →</p>
+                            </div>
+                            <div class="flip-card-back" style="background: #D4AF37; color: white;">
+                                <h3>15% OFF</h3>
+                                <p>First order discount!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Attention Seekers -->
+            <section class="demo-section">
+                <h2 class="demo-title">Attention Animations</h2>
+                <div class="instruction">
+                    👀 These animations draw attention to important elements
+                </div>
+                <div class="demo-grid">
+                    <div class="demo-box attention-bounce">
+                        <i class="fas fa-exclamation-circle" style="font-size: 3rem; color: #E53935;"></i>
+                        <h3>Attention Bounce</h3>
+                    </div>
+                    <div class="demo-box attention-pulse">
+                        <i class="fas fa-bell" style="font-size: 3rem; color: #FB8C00;"></i>
+                        <h3>Attention Pulse</h3>
+                    </div>
+                    <div class="demo-box attention-heartbeat">
+                        <i class="fas fa-heart" style="font-size: 3rem; color: #E53935;"></i>
+                        <h3>Heartbeat</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Notes -->
+            <section class="demo-section">
+                <h2 class="demo-title">Features Summary</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="demo-box" style="text-align: left;">
+                        <h3>✨ Animation Features</h3>
+                        <ul style="line-height: 2;">
+                            <li>🎬 Scroll-triggered animations with Intersection Observer</li>
+                            <li>👆 Touch swipe gestures for mobile (left/right)</li>
+                            <li>🖱️ Hover effects with smooth transitions</li>
+                            <li>💫 Staggered animations for lists</li>
+                            <li>🔄 Card flip animations</li>
+                            <li>⏳ Loading states (spinners, skeletons)</li>
+                            <li>💨 Parallax scrolling effects</li>
+                            <li>🎯 Ripple effects on click</li>
+                            <li>📱 Swipe indicators with emoji feedback</li>
+                            <li>❤️ Favorites system with swipe-right gesture</li>
+                            <li>♿ Respects `prefers-reduced-motion`</li>
+                            <li>⚡ GPU-accelerated for smooth performance</li>
+                        </ul>
+                        <br>
+                        <h3>📱 Mobile Gestures</h3>
+                        <ul style="line-height: 2;">
+                            <li><strong>Swipe Right:</strong> Add to favorites ❤️</li>
+                            <li><strong>Swipe Left:</strong> Dismiss 👈</li>
+                            <li><strong>Visual Feedback:</strong> Real-time transform and rotation</li>
+                            <li><strong>Indicators:</strong> Emoji feedback on swipe complete</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p style="text-align: center; padding: 2rem 0;">
+                    🎨 Advanced Animations Demo |
+                    <a href="index.html">Back to Caffeine Website</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

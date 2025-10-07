@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Caffeine - Visit us, send a message, or find our location. We'd love to hear from you!">
+    <title>Contact Us - Caffeine Coffee Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-coffee" aria-hidden="true"></i>
+                        <span>CAFFEINE</span>
+                    </a>
+
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <a href="login.html" class="btn-login">Login</a>
+                        <a href="register.html" class="btn-signup">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-overlay"></div>
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>We'd love to hear from you</p>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-info-grid">
+                    <article class="contact-info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>123 Coffee Street<br>Brew City, BC 12345<br>United States</p>
+                    </article>
+
+                    <article class="contact-info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+15551234567">(555) 123-4567</a><br>Available during business hours</p>
+                    </article>
+
+                    <article class="contact-info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:hello@caffeine.com">hello@caffeine.com</a><br>We'll respond within 24 hours</p>
+                    </article>
+
+                    <article class="contact-info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Hours</h3>
+                        <p>Mon-Fri: 6AM - 8PM<br>Sat: 7AM - 9PM<br>Sun: 7AM - 7PM</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form and Map Section -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <h2>Send Us a Message</h2>
+                        <p class="form-description">Have a question or feedback? Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    aria-required="true"
+                                    placeholder="Enter your full name"
+                                >
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    aria-required="true"
+                                    placeholder="your.email@example.com"
+                                >
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="(555) 123-4567"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <select id="subject" name="subject" required aria-required="true">
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="catering">Catering Services</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="wholesale">Wholesale Orders</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    required
+                                    aria-required="true"
+                                    placeholder="Tell us what's on your mind..."
+                                ></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span>Subscribe to our newsletter for updates and special offers</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-circle-notch fa-spin"></i> Sending...
+                                </span>
+                            </button>
+
+                            <div class="form-success" id="formSuccess" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Map and Additional Info -->
+                    <div class="contact-map-wrapper">
+                        <div class="map-container">
+                            <h3>Find Us Here</h3>
+                            <!-- Map Placeholder - Replace with actual embedded map -->
+                            <div class="map-placeholder">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316b2b5e4f%3A0xc889234e5f7e9c3d!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890123"
+                                    width="100%"
+                                    height="100%"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Caffeine Coffee Shop Location"
+                                ></iframe>
+                            </div>
+                        </div>
+
+                        <div class="additional-info">
+                            <h3>Directions</h3>
+                            <ul class="directions-list">
+                                <li><i class="fas fa-subway"></i> <strong>Metro:</strong> Exit at Central Station, 5-minute walk</li>
+                                <li><i class="fas fa-bus"></i> <strong>Bus:</strong> Routes 12, 45, and 67 stop nearby</li>
+                                <li><i class="fas fa-parking"></i> <strong>Parking:</strong> Street parking and garage on 2nd Avenue</li>
+                                <li><i class="fas fa-wheelchair"></i> <strong>Accessibility:</strong> Wheelchair accessible entrance</li>
+                            </ul>
+                        </div>
+
+                        <div class="social-connect">
+                            <h3>Connect With Us</h3>
+                            <p>Follow us on social media for the latest updates, special offers, and coffee inspiration.</p>
+                            <div class="social-links-large">
+                                <a href="#" aria-label="Facebook" class="social-btn facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" aria-label="Instagram" class="social-btn instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" aria-label="Twitter" class="social-btn twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" aria-label="LinkedIn" class="social-btn linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Do you offer WiFi?</h3>
+                        <p>Yes! We offer free high-speed WiFi to all customers. The password is available on your receipt or ask any staff member.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Can I host events at Caffeine?</h3>
+                        <p>Absolutely! We have space available for private events, meetings, and gatherings. Contact us to discuss your needs and availability.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Do you offer catering services?</h3>
+                        <p>Yes, we provide catering for corporate events, meetings, and special occasions. Choose from our coffee service packages and food platters.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Are there vegan and gluten-free options?</h3>
+                        <p>Yes! We have a variety of plant-based milk alternatives and several vegan and gluten-free food options. Check our menu for details.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Do you sell gift cards?</h3>
+                        <p>Yes, gift cards are available in-store and online. They make perfect gifts for coffee lovers and never expire.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Can I buy your coffee beans?</h3>
+                        <p>Absolutely! We sell whole bean and ground coffee in-store. We also offer online ordering with nationwide shipping.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Caffeine</h3>
+                    <p>Your neighborhood coffee shop dedicated to serving premium artisan coffee and creating a welcoming community space.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> 6:00 AM - 8:00 PM</li>
+                        <li><span>Saturday:</span> 7:00 AM - 9:00 PM</li>
+                        <li><span>Sunday:</span> 7:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Brew City, BC 12345</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@caffeine.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Caffeine Coffee Shop. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

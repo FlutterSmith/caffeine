@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Caffeine account to place orders and track your rewards.">
+    <title>Login - Caffeine Coffee Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-coffee" aria-hidden="true"></i>
+                        <span>CAFFEINE</span>
+                    </a>
+
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <a href="register.html" class="btn-signup">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="auth-section">
+            <div class="auth-container">
+                <div class="auth-wrapper">
+                    <!-- Auth Image Side -->
+                    <div class="auth-image-side">
+                        <div class="auth-image-overlay"></div>
+                        <div class="auth-image-content">
+                            <h2>Welcome Back!</h2>
+                            <p>Login to access your account, place orders, and enjoy exclusive rewards.</p>
+                            <ul class="auth-benefits">
+                                <li><i class="fas fa-check-circle"></i> Fast checkout</li>
+                                <li><i class="fas fa-check-circle"></i> Order history</li>
+                                <li><i class="fas fa-check-circle"></i> Exclusive offers</li>
+                                <li><i class="fas fa-check-circle"></i> Rewards program</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Login Form Side -->
+                    <div class="auth-form-side">
+                        <div class="auth-form-container">
+                            <div class="auth-header">
+                                <h1>Login to Your Account</h1>
+                                <p>Enter your credentials to continue</p>
+                            </div>
+
+                            <!-- Social Login Options -->
+                            <div class="social-login">
+                                <button class="social-btn google-btn" type="button">
+                                    <i class="fab fa-google"></i>
+                                    <span>Continue with Google</span>
+                                </button>
+                                <button class="social-btn facebook-btn" type="button">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Continue with Facebook</span>
+                                </button>
+                                <button class="social-btn apple-btn" type="button">
+                                    <i class="fab fa-apple"></i>
+                                    <span>Continue with Apple</span>
+                                </button>
+                            </div>
+
+                            <div class="divider-with-text">
+                                <span>Or login with email</span>
+                            </div>
+
+                            <!-- Login Form -->
+                            <form id="loginForm" class="auth-form" novalidate>
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-envelope"></i>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            required
+                                            aria-required="true"
+                                            placeholder="your.email@example.com"
+                                            autocomplete="email"
+                                        >
+                                    </div>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-lock"></i>
+                                        <input
+                                            type="password"
+                                            id="password"
+                                            name="password"
+                                            required
+                                            aria-required="true"
+                                            placeholder="Enter your password"
+                                            autocomplete="current-password"
+                                        >
+                                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <span class="error-message" id="passwordError"></span>
+                                </div>
+
+                                <div class="form-row">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="remember" name="remember">
+                                        <span>Remember me</span>
+                                    </label>
+                                    <a href="#" class="forgot-password-link">Forgot Password?</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-submit btn-full">
+                                    <span class="btn-text">Login</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <i class="fas fa-circle-notch fa-spin"></i> Logging in...
+                                    </span>
+                                </button>
+
+                                <div class="form-success" id="loginSuccess" style="display: none;">
+                                    <i class="fas fa-check-circle"></i>
+                                    <p>Login successful! Redirecting...</p>
+                                </div>
+
+                                <div class="form-error" id="loginError" style="display: none;">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <p id="loginErrorMessage"></p>
+                                </div>
+                            </form>
+
+                            <div class="auth-footer">
+                                <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Caffeine</h3>
+                    <p>Your neighborhood coffee shop dedicated to serving premium artisan coffee and creating a welcoming community space.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> 6:00 AM - 8:00 PM</li>
+                        <li><span>Saturday:</span> 7:00 AM - 9:00 PM</li>
+                        <li><span>Sunday:</span> 7:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Brew City, BC 12345</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@caffeine.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Caffeine Coffee Shop. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

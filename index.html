@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caffeine - Premium coffee shop offering artisan coffee, fresh pastries, and a welcoming atmosphere. Visit us for the perfect cup.">
+    <meta name="keywords" content="coffee, cafe, espresso, latte, cappuccino, pastries, artisan coffee">
+    <title>Caffeine - Premium Artisan Coffee Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header and Navigation -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-coffee" aria-hidden="true"></i>
+                        <span>CAFFEINE</span>
+                    </a>
+
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <a href="login.html" class="btn-login">Login</a>
+                        <a href="register.html" class="btn-signup">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="banner">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Wake Up to Perfection</h1>
+                <p class="hero-subtitle">Discover premium artisan coffee crafted with passion and precision</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+                    <a href="about.html" class="btn btn-secondary">Our Story</a>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Welcome to Caffeine</h2>
+                    <div class="divider"></div>
+                    <p class="section-subtitle">Where every cup tells a story</p>
+                </div>
+                <div class="welcome-grid" data-stagger>
+                    <div class="welcome-item scroll-reveal">
+                        <div class="icon-circle">
+                            <i class="fas fa-coffee" aria-hidden="true"></i>
+                        </div>
+                        <h3>Premium Quality</h3>
+                        <p>Sourced from the finest coffee farms around the world, roasted to perfection</p>
+                    </div>
+                    <div class="welcome-item scroll-reveal">
+                        <div class="icon-circle">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3>Made with Love</h3>
+                        <p>Every beverage is crafted by our expert baristas with passion and care</p>
+                    </div>
+                    <div class="welcome-item scroll-reveal">
+                        <div class="icon-circle">
+                            <i class="fas fa-leaf" aria-hidden="true"></i>
+                        </div>
+                        <h3>Sustainable</h3>
+                        <p>Committed to ethical sourcing and environmentally friendly practices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Favorites</h2>
+                    <div class="divider"></div>
+                    <p class="section-subtitle">Handpicked selections from our menu</p>
+                </div>
+                <div class="products-grid" data-stagger>
+                    <article class="product-card swipeable scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Classic Espresso - Rich and bold Italian coffee">
+                            <button class="quick-add" data-product="Classic Espresso" data-price="3.50" aria-label="Add Classic Espresso to cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Classic Espresso</h3>
+                            <p>Rich, bold, and perfectly extracted Italian espresso</p>
+                            <div class="product-footer">
+                                <span class="price">$3.50</span>
+                                <button class="btn-add-cart" data-product="Classic Espresso" data-price="3.50">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card featured swipeable scroll-reveal">
+                        <div class="featured-badge">Popular</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=800" alt="Caramel Macchiato - Espresso with vanilla and caramel">
+                            <button class="quick-add" data-product="Caramel Macchiato" data-price="5.50" aria-label="Add Caramel Macchiato to cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Caramel Macchiato</h3>
+                            <p>Espresso with vanilla-flavored syrup and caramel drizzle</p>
+                            <div class="product-footer">
+                                <span class="price">$5.50</span>
+                                <button class="btn-add-cart" data-product="Caramel Macchiato" data-price="5.50">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card swipeable scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=800" alt="Cappuccino - Espresso with steamed milk foam">
+                            <button class="quick-add" data-product="Cappuccino" data-price="4.50" aria-label="Add Cappuccino to cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Cappuccino</h3>
+                            <p>Perfect harmony of espresso, steamed milk, and foam</p>
+                            <div class="product-footer">
+                                <span class="price">$4.50</span>
+                                <button class="btn-add-cart" data-product="Cappuccino" data-price="4.50">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card swipeable scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800" alt="Croissant - Fresh buttery French pastry">
+                            <button class="quick-add" data-product="Fresh Croissant" data-price="3.00" aria-label="Add Fresh Croissant to cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Fresh Croissant</h3>
+                            <p>Buttery, flaky French pastry baked fresh daily</p>
+                            <div class="product-footer">
+                                <span class="price">$3.00</span>
+                                <button class="btn-add-cart" data-product="Fresh Croissant" data-price="3.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta">
+                    <a href="menu.html" class="btn btn-outline">View Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-overlay"></div>
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join Our Coffee Community</h2>
+                    <p>Sign up today and get 15% off your first order</p>
+                    <a href="register.html" class="btn btn-light">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="testimonials-grid" data-stagger>
+                    <article class="testimonial-card scroll-reveal">
+                        <div class="stars" aria-label="5 star rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best coffee in town! The atmosphere is cozy and the baristas really know their craft. I'm here every morning!"</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah Johnson</strong>
+                            <span>Regular Customer</span>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars" aria-label="5 star rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The quality of coffee is exceptional. You can taste the difference that comes from ethically sourced beans."</p>
+                        <div class="testimonial-author">
+                            <strong>Michael Chen</strong>
+                            <span>Coffee Enthusiast</span>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars" aria-label="5 star rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Perfect spot for remote work. Great WiFi, delicious coffee, and the pastries are to die for!"</p>
+                        <div class="testimonial-author">
+                            <strong>Emily Rodriguez</strong>
+                            <span>Freelance Designer</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Caffeine</h3>
+                    <p>Your neighborhood coffee shop dedicated to serving premium artisan coffee and creating a welcoming community space.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> 6:00 AM - 8:00 PM</li>
+                        <li><span>Saturday:</span> 7:00 AM - 9:00 PM</li>
+                        <li><span>Sunday:</span> 7:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Brew City, BC 12345</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@caffeine.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Caffeine Coffee Shop. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
