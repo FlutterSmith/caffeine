@@ -53,3 +53,6 @@ $RECYCLE.BIN/
 
 # Documentation
 CLAUDE.md
+
+# Railway (keep config files)
+# .railway files should NOT be in gitignore - we want to track the project link
