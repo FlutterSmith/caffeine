@@ -1,7 +1,6 @@
 # Dependencies
 node_modules/
 package-lock.json
-CLAUDE.md
 # Environment variables
 .env
 .env.local
@@ -51,3 +50,6 @@ Desktop.ini
 $RECYCLE.BIN/
 
 .vercel
+
+# Documentation
+CLAUDE.md
